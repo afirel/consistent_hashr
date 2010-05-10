@@ -1,10 +1,10 @@
-= ConsitentHashr
+= ConsistentHashr
 
 A small module to do easy consistent hashing.
 
 == Usage
 
-hashr = ConsitentHashr.new()
+hashr = ConsistentHashr.new()
 
 hashr.add_server("s1", server1)
 hashr.add_server("s2", server2)

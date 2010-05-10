@@ -4,7 +4,7 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "ConsistentHashr"
+    gem.name = "consistent_hashr"
     gem.summary = %Q{A ruby gem to do consistent hashing}
     gem.description = %Q{A simple gem to perform consistent hashing}
     gem.email = "julien.genestoux@gmail.com"
@@ -24,7 +24,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "ConsistentHashr #{version}"
+  rdoc.title = "consistent_hashr #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
