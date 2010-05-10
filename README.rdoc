@@ -4,15 +4,13 @@ A small module to do easy consistent hashing.
 
 == Usage
 
-hashr = ConsistentHashr.new()
+ConsistentHashr.add_server("s1", "server1")
+ConsistentHashr.add_server("s2", "server2")
+ConsistentHashr.add_server("s3", "server3")
+ConsistentHashr.add_server("s4", "server4")
+ConsistentHashr.add_server("s5", "server5")
 
-hashr.add_server("s1", "server1")
-hashr.add_server("s2", "server2")
-hashr.add_server("s3", "server3")
-hashr.add_server("s4", "server4")
-hashr.add_server("s5", "server5")
-
-hashr.get(key) # Should return the same key consistently when new servers are added.
+ConsistentHashr.get(key) # Should return the same key consistently when new servers are added.
 
 == Implementation
 
