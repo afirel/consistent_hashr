@@ -1,0 +1,18 @@
+= ConsitentHashr
+
+A small module to do easy consistent hashing.
+
+== Usage
+
+hashr = ConsitentHashr.new()
+
+hashr.add_server("s1", server1)
+hashr.add_server("s2", server2)
+
+hashr.server_for(key) # Should return the same key consistently when new servers are added.
+
+== Implementation
+
+Based on "Mike Perham's":http://www.mikeperham.com/ "code":http://www.mikeperham.com/2009/01/14/consistent-hashing-in-memcache-client/ and tests. I thought this layer didn't belong to any specific client, this is why I extracted it.
+
+Greatly inspired by "Tom White's consistent hashing explaination":http://weblogs.java.net/blog/tomwhite/archive/2007/11/consistent_hash.html.
