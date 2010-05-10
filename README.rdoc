@@ -6,10 +6,13 @@ A small module to do easy consistent hashing.
 
 hashr = ConsistentHashr.new()
 
-hashr.add_server("s1", server1)
-hashr.add_server("s2", server2)
+hashr.add_server("s1", "server1")
+hashr.add_server("s2", "server2")
+hashr.add_server("s3", "server3")
+hashr.add_server("s4", "server4")
+hashr.add_server("s5", "server5")
 
-hashr.server_for(key) # Should return the same key consistently when new servers are added.
+hashr.get(key) # Should return the same key consistently when new servers are added.
 
 == Implementation
 
