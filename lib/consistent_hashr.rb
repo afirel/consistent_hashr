@@ -12,16 +12,22 @@ class ConsistentHashr
     end
   end
   
+  ##
+  # Computes a key
   def hash_key(key)
     Zlib.crc32("#{key}")
   end
 
+  ##
+  # Adds a server to the circle
   def add_server(_name, _server)
     @number_of_replicas.times do |t|
       @circle[hash_key("#{_name}+#{t}")] = _server
     end
   end
   
+  ##
+  # Returns the server for the provided key
   def get(key)
     return nil if @circle.empty?
     return @circle.first.last if @circle.size == 1
